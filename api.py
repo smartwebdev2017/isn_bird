@@ -1,6 +1,5 @@
 import sys
 import os
-from flask_mail import Mail, Message
 import requests
 import json
 
