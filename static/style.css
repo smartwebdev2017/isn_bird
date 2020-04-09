@@ -1,0 +1,162 @@
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+body {
+}
+.wrapper .content {
+    width: 50%;
+    margin: 0 auto;
+}
+.wrapper h4, p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.wrapper .row {
+    margin-bottom: 20px;
+}
+.wrapper .row .brand, .row .address{
+    float: left;
+    min-height: 200px;
+}
+.wrapper .brand img {
+    width: 300px;
+    padding-top: 50px;
+    padding-left: 40px;
+}
+.wrapper .row .logo2 img{
+    width:300px;
+    float: right;
+}
+.wrapper .address {
+    padding-left: 15%;
+}
+.wrapper .bold {
+    font-weight: 700;
+}
+.wrapper table {
+    padding: 3px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom:40px
+}
+.wrapper .main_table {
+    width: 100%;
+}
+.wrapper .main_table input {
+    width: 100%;
+    height:100%;
+    padding-left: 20px;
+}
+.main_table td {
+    padding-left: 20px;
+}
+.wrapper .main_table .nopadding {
+    padding-left: 0px;
+}
+.wrapper .main_table label {
+
+}
+.wrapper .ref_table {
+    width: 30%;
+    text-align: center;
+}
+.wrapper td {
+    border: 1px solid;
+    height: 30px;
+}
+.wrapper p {
+    margin: 10px 0;
+}
+.wrapper table .title {
+    font-weight: bold;
+}
+.wrapper .title td {
+    text-align: center;
+}
+.wrapper .addr {
+    height: 30px;
+    width: calc(100% - 100px);
+}
+.wrapper .nunit {
+    height: 30px;
+    padding-left: 20px;
+}
+.wrapper .btn {
+    height:30px;
+}
+
+.pdf_wrapper .content {
+    width: 100%;
+    margin: 0 auto;
+}
+.pdf_wrapper h4, p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.pdf_wrapper .row {
+    margin-bottom: 20px;
+}
+.pdf_wrapper .row .brand, .row .address{
+    width: 80%;
+    float: left;
+    min-height: 200px;
+}
+.pdf_wrapper .brand img {
+    width: 300px;
+    padding-top: 50px;
+}
+.pdf_wrapper .row .logo2 img{
+    width:300px;
+}
+.pdf_wrapper .address {
+    padding-left: 15%;
+}
+.pdf_wrapper .bold {
+    font-weight: 700;
+}
+.pdf_wrapper table {
+    padding: 3px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-bottom:40px
+}
+.pdf_wrapper .main_table {
+    width: 100%;
+}
+.pdf_wrapper .main_table input {
+    width: 100%;
+    height:100%;
+    padding-left: 20px;
+}
+.pdf_wrapper .main_table td {
+    padding-left: 20px;
+}
+.pdf_wrapper .main_table .nopadding {
+    padding-left: 0px;
+}
+.pdf_wrapper .main_table label {
+
+}
+.pdf_wrapper .ref_table {
+    width: 50%;
+    text-align: center;
+}
+.pdf_wrapper td {
+    border: 1px solid;
+    height: 30px;
+}
+.pdf_wrapper p {
+    margin: 10px 0;
+}
+.pdf_wrapper table .title {
+    font-weight: bold;
+}
+.pdf_wrapper .title td {
+    text-align: center;
+}
+.pdf_wrapper .address {
+    height: 30px;
+    width: 89%;
+}
