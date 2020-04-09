@@ -18,44 +18,51 @@ app = Flask(__name__)
 
 @app.route("/", methods = ['GET', 'POST'])
 def index():
-
-    #if request.method =='POST':
-    params = {
-        'after': '04/01/2020',
-        # 'end': '2020-04-09T14:03:01.956Z'
-    }
-    res = requests.get(BASE_URL + '/orders', auth=(USER_NAME, USER_PASSWORD), params=params)
-    orders = json.loads(res.text)
-
-    for order in orders['orders']:
-        res = requests.get(BASE_URL + '/order/{}'.format(order['id']), auth=(USER_NAME, USER_PASSWORD))
-        detailed_order = json.loads(res.text)
-        client_id = detailed_order['order']['client']
-
-        res = requests.get(BASE_URL + '/client/{}'.format(client_id), auth=(USER_NAME, USER_PASSWORD))
-        client_data = json.loads(res.text)
-
-        first_name = client_data['client']['first']
-        last_name = client_data['client']['last']
-        email = client_data['client']['email']
-
-        mobile = client_data['client']['mobilephone']
-
-
-    params = {
-        'after': '04/01/2020',
-        #'end': '2020-04-09T14:03:01.956Z'
-    }
-    res = requests.get(BASE_URL + '/orders' , auth=(USER_NAME, USER_PASSWORD), params=params)
-    orders = json.loads(res._content)
-
-    for order in orders['orders']:
-        res = requests.get(BASE_URL + '/order/{}'.format(order['id']), auth=(USER_NAME, USER_PASSWORD))
-        detailed_order = json.loads(res._content)
-        pass
-    print(res)
-
     return render_template('index.html')
+
+@app.route("/post", methods = ['POST'])
+def post():
+
+    # #if request.method =='POST':
+    # params = {
+    #     'after': '04/01/2020',
+    #     # 'end': '2020-04-09T14:03:01.956Z'
+    # }
+    # res = requests.get(BASE_URL + '/orders', auth=(USER_NAME, USER_PASSWORD), params=params)
+    # orders = json.loads(res.text)
+    #
+    # for order in orders['orders']:
+    #     res = requests.get(BASE_URL + '/order/{}'.format(order['id']), auth=(USER_NAME, USER_PASSWORD))
+    #     detailed_order = json.loads(res.text)
+    #     client_id = detailed_order['order']['client']
+    #
+    #     res = requests.get(BASE_URL + '/client/{}'.format(client_id), auth=(USER_NAME, USER_PASSWORD))
+    #     client_data = json.loads(res.text)
+    #
+    #     first_name = client_data['client']['first']
+    #     last_name = client_data['client']['last']
+    #     email = client_data['client']['email']
+    #
+    #     mobile = client_data['client']['mobilephone']
+    #
+    #
+    # params = {
+    #     'after': '04/01/2020',
+    #     #'end': '2020-04-09T14:03:01.956Z'
+    # }
+    # res = requests.get(BASE_URL + '/orders' , auth=(USER_NAME, USER_PASSWORD), params=params)
+    # orders = json.loads(res._content)
+    #
+    # for order in orders['orders']:
+    #     res = requests.get(BASE_URL + '/order/{}'.format(order['id']), auth=(USER_NAME, USER_PASSWORD))
+    #     detailed_order = json.loads(res._content)
+    #     pass
+    # print(res)
+    #
+    # return render_template('index.html')
+    res = request.get_json()
+    print(res)
+    return request.get_json()
 
 @app.route("/order/<id>", methods=['GET'])
 def order(id):
