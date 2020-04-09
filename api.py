@@ -5,7 +5,7 @@ import requests
 import json
 
 
-sys.path.append('/home/me/Workspace')
+sys.path.append('/var/www')
 
 from flask import redirect, render_template, url_for, flash, request, Flask, send_file, jsonify, send_from_directory
 
@@ -16,7 +16,6 @@ COMPANY_KEY = 'inspectup'
 
 app = Flask(__name__)
 
-PATH = '/home/me/Workspace/paxton'
 @app.route("/", methods = ['GET', 'POST'])
 def index():
 
